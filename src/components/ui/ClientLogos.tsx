@@ -90,7 +90,7 @@ export default function ClientLogos() {
           <div className="flex animate-slide">
             {/* First set of logos */}
             <div className="flex items-center justify-around min-w-full gap-16 px-8">
-              {clientLogos.map((client, index) => (
+              {clientLogos.map((client) => (
                 <motion.div
                   key={`first-${client.name}`}
                   className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300"
@@ -104,7 +104,7 @@ export default function ClientLogos() {
             
             {/* Duplicate set for seamless loop */}
             <div className="flex items-center justify-around min-w-full gap-16 px-8">
-              {clientLogos.map((client, index) => (
+              {clientLogos.map((client) => (
                 <motion.div
                   key={`second-${client.name}`}
                   className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300"
@@ -119,7 +119,7 @@ export default function ClientLogos() {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes slide {
           from {
             transform: translateX(0%);
